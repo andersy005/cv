@@ -1,5 +1,8 @@
 name: r-base
 channels:
   - conda-forge
+  - r
 dependencies:
   - r-base
+  - r-essentials
+  - rstudio
