@@ -53,7 +53,7 @@ datadrivencv::build_network_logo(CV$entries_data)
 
 ```{r}
 if(params$pdf_mode){
-  cat("View this CV online with links at _andersonbanihirwe.dev/cv/_")
+  cat("View this CV online with links at _cv.andersonbanihirwe.dev_")
 } else {
   cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/andersy005/cv/raw/master/banihirwe_cv.pdf)")
 }
