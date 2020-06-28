@@ -3,6 +3,12 @@ channels:
   - conda-forge
   - r
 dependencies:
+  - r-asioheaders
   - r-base
+  - r-devtools
   - r-essentials
-  - rstudio
+  - r-fs
+  - r-googledrive
+  - r-googlesheets4
+  - r-websocket
+  - rstudio>=1.1
