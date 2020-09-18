@@ -21,6 +21,16 @@ jobs:
       - name: Install dependencies
         shell: Rscript {0}
         run: |
-          install.packages('remotes')
+          # install.packages('remotes')
           install.packages('devtools')
           devtools::install_github("nstrayer/datadrivencv")
+      - name: Render Resume
+        run: |
+          cd src/
+          Rscript render_cv.r
+
+      - name: Commit up-to-date files
+        run: |
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+          git add . && git commit -m "[skip ci] Add up-to-date files."
