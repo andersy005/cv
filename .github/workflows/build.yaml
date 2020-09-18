@@ -16,4 +16,5 @@ jobs:
           r-version: '3.5.3'
       - name: Install dependencies
         run: |
-          - Rscript -e "remotes::install_github('nstrayer/datadrivencv')"
+          Rscript -e 'install.packages(c("remotes", "devtools"))' -e 'remotes::install_deps(dependencies = TRUE)'
+          Rscript -e "remotes::install_github('nstrayer/datadrivencv')"
