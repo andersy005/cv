@@ -14,17 +14,18 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - uses: r-lib/actions/setup-r@master
-        with:
-          r-version: '3.4'
+        # with:
+        #   r-version: '3.4'
       - uses: r-lib/actions/setup-pandoc@master
       - name: Install System wide dependencies
         run: |
-          sudo apt install -y build-essential libcurl4-gnutls-dev libxml2-dev libssl-dev r-cran-devtools
+          sudo apt install -y build-essential libcurl4-gnutls-dev libxml2-dev libssl-dev
+          sudo -i R
       - name: Install dependencies
         shell: Rscript {0}
         run: |
           # install.packages('remotes')
-          # install.packages('devtools', dependencies=TRUE)
+          install.packages('devtools', dependencies=TRUE)
           devtools::install_github("nstrayer/datadrivencv")
       - name: Render Resume
         run: |
