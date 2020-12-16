@@ -20,7 +20,6 @@ jobs:
       - name: Install System wide dependencies
         run: |
           sudo apt install -y build-essential libcurl4-gnutls-dev libxml2-dev libssl-dev
-          sudo -i R
       - name: Install dependencies
         shell: Rscript {0}
         run: |
