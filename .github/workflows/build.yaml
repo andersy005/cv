@@ -14,8 +14,8 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - uses: r-lib/actions/setup-r@master
-        # with:
-        #   r-version: '3.5.3'
+        with:
+          r-version: '3.4'
       - uses: r-lib/actions/setup-pandoc@master
       - name: Install System wide dependencies
         run: |
