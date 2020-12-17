@@ -28,7 +28,7 @@ jobs:
           mamba env update -f environment.yaml
 
       - name: Install dependencies
-        shell: Rscript {0}
+        shell: R
         run: |
             devtools::install_github("nstrayer/datadrivencv", upgrade_dependencies=FALSE)
 
