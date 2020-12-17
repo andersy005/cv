@@ -1,6 +1,6 @@
 name: r-base
 channels:
-  - r
+  - conda-forge
 dependencies:
   - r-asioheaders
   - r-base
@@ -10,4 +10,5 @@ dependencies:
   - r-googledrive
   - r-googlesheets4
   - r-websocket
+  - unzip
   # - rstudio>=1.1
