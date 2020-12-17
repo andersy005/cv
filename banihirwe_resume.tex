@@ -1,0 +1,183 @@
+%-------------------------
+% Resume in Latex
+% Author : Anderson Banihirwe
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://andersonbanihirwe.dev}{\Large Anderson Banihirwe}} & Email : \href{mailto:abanihi@ucar.edu}{abanihi@ucar.edu}\\
+  \href{https://andersonbanihirwe.dev}{https://andersonbanihirwe.dev} &
+  Github : \href{https://github.com/andersy005}{andersy005} \\
+  & LinkedIn: \href{https://www.linkedin.com/in/andersy005}{andersy005} \\
+\end{tabular*}
+
+
+
+\section{\sc Summary}
+
+I contribute to and maintain several libraries within the open source scientific Python stack,
+particularly around improving scalability of Python tools in order to handle terabyte-scale
+datasets on HPC and cloud platforms.
+
+%-----------EXPERIENCE-----------------
+\section{Professional Experience}
+  \resumeSubHeadingListStart
+
+  \resumeSubheading
+      { National Center for Atmospheric Research}{Boulder, CO}
+      {Software Engineer}{Oct 2018 -- Present}
+      \resumeItemListStart
+        \resumeItem{Jupyter-forward}
+          {Created \href{https://github.com/NCAR/jupyter-forward}{Jupyter-forward}, a Jupyter Lab port forwarding utility that simplifies running jupyter on remote resources.}
+        \resumeItem{Xarray}
+          {Served as a core developer of xarray, an open source library for working with multidimensional labeled arrays in Python.}
+
+        \resumeItem{Intake-ESM}
+          {Led the \href{https://github.com/intake/intake-esm}{intake-ESM project}, a Python data cataloguing package for working with earth system model data sets.}
+        \resumeItem{Pangeo Project}
+          {Contributed to the core software stack powering the \href{https://pangeo.io/}{Pangeo project}. Some of the projects I contributed to include: dask, intake.}
+        \resumeItem{Data Management}
+          {Led the effort to produce 100 terabytes of \href{https://registry.opendata.aws/ncar-cesm-lens/}{CESM LENS} analysis ready data in zarr format and transfer them to cloud storage.}
+        \resumeItem{Outreach and Teaching}
+          {Assisted with the development and delivery of \href{https://ncar.github.io/ncar-python-tutorial/posts/fall-2019-tutorial/}{in-person} and \href{https://youtu.be/a339Q5F48UQ}{online} Python education material.}
+
+
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Quansight}{}
+      {Intern}{June 2018 -- Sept 2018}
+      \resumeItemListStart
+        \resumeSubItem{xnd}
+        {Developed \href{https://github.com/xnd-project/xndframes}{xndframes},a Pandas ExtensionDtype/Array backed by xnd}
+        \resumeSubItem{GPU DataFrame}
+         {Worked on integrating \href{https://github.com/rapidsai/cudf}{cuDF} with Apache Arrow Library.}
+
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {First Orion}{Little Rock, AR}
+      {Data Scientist Intern}{Dec 2017 -- May 2018}
+      \resumeItemListStart
+        \resumeItem{Machine Learning}{Designed and built scoring, predictive models with Scikit-learn using First Orion' s proprietary telecommunication data.}
+        \resumeItem{Data Processing}
+          {Identified patterns and characteristics within First Orion's data warehouses using Dask, Apache Spark, Pandas.}
+
+      \resumeItemListEnd
+
+    \resumeSubheading
+      { National Center for Atmospheric Research}{Boulder, CO}
+      {Research Intern}{May 2017 -- Aug 2017}
+      \resumeItemListStart
+        \resumeItem{Installation}
+          {Installed Apache Spark v2.2 on both Cheyenne and Yellowstone Supercomputers.}
+        \resumeItem{Schedulers}
+          {Cleaned/fixed Spark launch bash scripts that work with the LSF/PBS schedulers.}
+
+        \resumeItem{spark-xarray}
+          {Wrote \href{https://ncar.github.io/PySpark4Climate/} {spark-xarray }, a Python package that integrates PySpark and xarray for Climate Data Analysis.}
+
+
+      \resumeItemListEnd
+
+
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {University of Arkansas at Little Rock}{Little Rock, AR}
+    {Bachelor of Science in (Computer) Systems Engineering}{Aug 2014 -- May 2018}
+\resumeSubHeadingListEnd
+
+
+
+
+%----------------SELECTED PRESENTATIONS---------
+\section{selected publications, and talks}
+  \resumeSubHeadingListStart
+
+   \resumeSubItem{\href{https://www.authorea.com/doi/full/10.22541/au.160443768.88917719}{Cloud-Native Repositories for Big Scientific Data}}{Authored with Ryan Abernathey, Tom Augspurger, et al. Computing in Science and Engineering. Nov 2020.}
+
+    \resumeSubItem{\href{https://talks.andersonbanihirwe.dev/climpred-cdpw-2020.html}{Analyzing Initialized Climate Prediction System Datasets with climpred}}{Invited talk about climpred, a Python package for weather and climate forecasts. NOAA's 45th Climate Diagnostics and Prediction Workshop. Oct 2020.}
+
+    \resumeSubItem{\href{https://doi.org/10.31223/X5ZW2T}{Pangeo Benchmarking Analysis: Object Storage vs. POSIX File System}}{Authored with Haiying Xu, Kevin Paul. Fifth International Parallel Data Systems Workshop @ SC 20. Nov 2020. }
+    \resumeSubItem{\href{https://talks.andersonbanihirwe.dev/zarr-cloud-native-geospatial-2020.html}{Zarr: chunked, compressed, multidimensional arrays}}{Invited talk about Zarr, an open source data format for the storage of chunked, compressed, multidimensional arrays. Cloud Native Geospatial Outreach Day 2020.}
+
+
+
+  \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
