@@ -25,6 +25,7 @@ jobs:
 
       - name: Set up conda environment
         run: |
+          sudo apt install tar -y
           mamba env update -f environment.yaml
 
       - name: Install dependencies
