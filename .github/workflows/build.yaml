@@ -37,12 +37,12 @@ jobs:
 
       - name: Set up conda environment
         run: |
-          mamba env update -f ci/environment.yml
+          mamba env update -f ci/environment.yaml
 
       - name: Install dependencies
         shell: Rscript {0}
         run: |
-            devtools::install_github("nstrayer/datadrivencv")
+            devtools::install_github("nstrayer/datadrivencv", upgrade_dependencies=FALSE)
 
       - name: Render Resume
         run: |
