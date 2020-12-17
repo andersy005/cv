@@ -12,20 +12,38 @@ jobs:
       run:
         shell: bash -l {0}
     steps:
-      - uses: actions/checkout@master
-      - uses: r-lib/actions/setup-r@master
-        # with:
-        #   r-version: '3.4'
-      - uses: r-lib/actions/setup-pandoc@master
-      - name: Install System wide dependencies
+      # - uses: actions/checkout@master
+      # - uses: r-lib/actions/setup-r@master
+      #   # with:
+      #   #   r-version: '3.4'
+      # - uses: r-lib/actions/setup-pandoc@master
+      # - name: Install System wide dependencies
+      #   run: |
+      #     sudo apt install -y build-essential libcurl4-gnutls-dev libxml2-dev libssl-dev
+      # - name: Install dependencies
+      #   shell: Rscript {0}
+      #   run: |
+      #     # install.packages('remotes')
+      #     install.packages('devtools', dependencies=TRUE)
+      #     devtools::install_github("nstrayer/datadrivencv")
+      - uses: actions/checkout@v2
+      - uses: conda-incubator/setup-miniconda@v2
+        with:
+          channels: conda-forge
+          mamba-version: '*'
+          activate-environment: r-base
+          auto-update-conda: false
+          python-version: 3.8
+
+      - name: Set up conda environment
         run: |
-          sudo apt install -y build-essential libcurl4-gnutls-dev libxml2-dev libssl-dev
+          mamba env update -f ci/environment.yml
+
       - name: Install dependencies
         shell: Rscript {0}
         run: |
-          # install.packages('remotes')
-          install.packages('devtools', dependencies=TRUE)
-          devtools::install_github("nstrayer/datadrivencv")
+            devtools::install_github("nstrayer/datadrivencv")
+
       - name: Render Resume
         run: |
           cd src/
