@@ -21,7 +21,6 @@ jobs:
           cache-version: 2
           extra-packages: |
             any::rcmdcheck
-            any::pak
 
       - name: Install dependencies
         env:
