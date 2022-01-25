@@ -1,3 +1,3 @@
 options(unzip = Sys.which("unzip"))
 Sys.which("tar")
-devtools::install_github("nstrayer/datadrivencv")
+pak::pkg_install("nstrayer/datadrivencv")
