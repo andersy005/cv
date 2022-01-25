@@ -1,5 +1,7 @@
 # My pagedown rendered CV
+
 ![Build](https://github.com/andersy005/cv/workflows/Build/badge.svg?branch=master)
+
 - [My pagedown rendered CV](#my-pagedown-rendered-cv)
   - [Dependencies](#dependencies)
   - [Building it](#building-it)
