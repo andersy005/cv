@@ -1,6 +1,7 @@
 # My pagedown rendered CV
 
-![Build](https://github.com/andersy005/cv/workflows/Build/badge.svg?branch=master)
+[![CI](https://github.com/andersy005/cv/actions/workflows/CI.yaml/badge.svg)](https://github.com/andersy005/cv/actions/workflows/CI.yaml)
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/andersy005/cv/main.svg)](https://results.pre-commit.ci/latest/github/andersy005/cv/main)
 
 - [My pagedown rendered CV](#my-pagedown-rendered-cv)
   - [Dependencies](#dependencies)
