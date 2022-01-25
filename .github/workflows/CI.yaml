@@ -17,19 +17,16 @@ jobs:
       - uses: actions/checkout@v2
       - uses: conda-incubator/setup-miniconda@v2.1.1
         with:
-          channels: conda-forge,nodefaults
-          mamba-version: '*'
+          channels: conda-forge,nodefaults,r
+          environment-file: environment.yaml
           channel-priority: strict
           activate-environment: r-base
           auto-update-conda: false
           python-version: 3.9
           miniforge-variant: Mambaforge
           miniforge-version: latest
+          mamba-version: '*'
           use-mamba: true
-
-      - name: Set up conda environment
-        run: |
-          mamba env update -f environment.yaml
 
       - name: Install dependencies
         run: |
@@ -44,10 +41,12 @@ jobs:
         with:
           name: index.html
           path: index.html
+          retention-days: 5
       - uses: actions/upload-artifact@v2
         with:
           name: banihirwe_cv.pdf
           path: banihirwe_cv.pdf
+          retention-days: 5
 
   update:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'

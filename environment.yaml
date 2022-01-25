@@ -2,6 +2,7 @@ name: r-base
 channels:
   - conda-forge
   - nodefaults
+  - r
 dependencies:
   - r-asioheaders
   - r-base
