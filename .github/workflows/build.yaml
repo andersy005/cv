@@ -29,20 +29,20 @@ jobs:
         run: |
             Rscript install_dep.r
 
-      # - name: Render Resume
-      #   run: |
-      #     cd src/
-      #     Rscript render_cv.r
+      - name: Render Resume
+        run: |
+          cd src/
+          Rscript render_cv.r
 
-      # - name: Commit up-to-date files
-      #   run: |
-      #     git config --global user.email "action@github.com"
-      #     git config --global user.name "GitHub Action"
-      #     git add . && git commit -m "[skip ci] Add up-to-date files."
+      - name: Commit up-to-date files
+        run: |
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+          git add . && git commit -m "[skip ci] Add up-to-date files."
 
-      # - name: Push commit
-      #   uses: ad-m/github-push-action@master
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
-      #     branch: ${{ github.event.pull_request.head.ref }}
-      #     force: true
+      - name: Push commit
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.event.pull_request.head.ref }}
+          force: true
