@@ -2,7 +2,7 @@ name: Build
 on:
   push:
     branches:
-      - master
+      - main
   workflow_dispatch: # allows you to trigger the workflow run manually
 jobs:
   build:
@@ -13,19 +13,17 @@ jobs:
         shell: bash -l {0}
     steps:
 
-      - uses: actions/checkout@v2
-      - uses: conda-incubator/setup-miniconda@v2
+      - uses: actions/checkout@v4
+      - name: set up conda environment
+        uses: mamba-org/setup-micromamba@v1
         with:
-          channels: conda-forge
-          mamba-version: '*'
-          channel-priority: strict
-          activate-environment: r-base
-          auto-update-conda: false
-          python-version: 3.8
+          environment-file: environment.yaml
+          init-shell: >-
+            bash
+          cache-environment: true
+          cache-downloads: true
+          post-cleanup: 'all'
 
-      - name: Set up conda environment
-        run: |
-          mamba env update -f environment.yaml
 
       - name: Install dependencies
         run: |
@@ -43,9 +41,8 @@ jobs:
           git add . && git commit -m "[skip ci] Add up-to-date files."
 
       - name: Push commit
-        if: github.ref == 'refs/heads/master'
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: master
+          branch: ${{ github.event.pull_request.head.ref }}
           force: true
