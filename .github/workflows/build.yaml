@@ -23,17 +23,17 @@ jobs:
           r-version: '4.1.2'
           use-public-rspm: true
 
-      - uses: r-lib/actions/setup-renv@v2
+      # - uses: r-lib/actions/setup-renv@v2
 
       - name: Install dependencies
         run: |
             Rscript install_dep.r
 
-      - name: Upload renv.lock to GitHub Artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: renv-lockfile
-          path: renv.lock
+      # - name: Upload renv.lock to GitHub Artifacts
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     name: renv-lockfile
+      #     path: renv.lock
 
       - name: Render Resume
         run: |
