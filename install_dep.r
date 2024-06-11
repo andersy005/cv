@@ -13,5 +13,5 @@ install.packages(c('remotes', 'devtools'))
 remotes::install_github('mitchelloharawild/icons@v0.1.0')
 devtools::install_github("nstrayer/datadrivencv")
 
-# Snapshot the current state of the library
-renv::snapshot()
+# # Snapshot the current state of the library
+# renv::snapshot()
