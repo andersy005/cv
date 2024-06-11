@@ -9,7 +9,7 @@ if (!file.exists("renv.lock")) {
 } else {
   renv::restore()
 }
-install.packages(c('remotes', 'devtools', 'bookdown', 'pagedown', 'googledrive', 'googlesheets4', 'websocket', 'curl'))
+install.packages(c('remotes', 'devtools'))
 remotes::install_github('mitchelloharawild/icons@v0.1.0')
 devtools::install_github("nstrayer/datadrivencv")
 
