@@ -20,5 +20,4 @@ dependencies:
   - r-servr
   - r-bookdown
   - r-pagedown
-  - r-icon
   # - rstudio>=1.1
