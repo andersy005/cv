@@ -12,4 +12,13 @@ dependencies:
   - r-googlesheets4
   - r-websocket
   - unzip
+  - libcurl
+  - openssl
+  - libxml2
+  - pandoc
+  - r-curl
+  - r-servr
+  - r-bookdown
+  - r-pagedown
+  - r-icon
   # - rstudio>=1.1
