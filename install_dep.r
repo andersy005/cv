@@ -1,4 +1,5 @@
 options(unzip = Sys.which("unzip"))
 Sys.which("tar")
-# devtools::install_github("mitchelloharawild/icons", ref = "master")
-devtools::install_github("nstrayer/datadrivencv", ref = "master")
+install.packages('remotes')
+install.packages('devtools')
+devtools::install_github("nstrayer/datadrivencv")
