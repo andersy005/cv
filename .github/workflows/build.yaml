@@ -26,6 +26,8 @@ jobs:
 
 
       - name: Install dependencies
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
             Rscript install_dep.r
 
