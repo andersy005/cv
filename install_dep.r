@@ -2,7 +2,5 @@ options(unzip = Sys.which("unzip"))
 Sys.which("tar")
 install.packages('remotes')
 install.packages('devtools')
-if (!requireNamespace("icon", quietly = TRUE)) {
-  remotes::install_github("rstudio/icon")
-}
+remotes::install_github('mitchelloharawild/icons@v0.1.0')
 devtools::install_github("nstrayer/datadrivencv")
