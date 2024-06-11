@@ -4,7 +4,7 @@ channels:
   - conda-forge
 dependencies:
   - r-asioheaders
-  - r-base<=4.2
+  - r-base
   - r-devtools
   - r-essentials
   - r-fs
